@@ -14,7 +14,15 @@ Support multiple formats(array root / multiple array)
 add json_dart_generator to dependencies
 
 ```yaml
+dependencies:
+  flutter:
+    sdk: flutter
+  json_to_dart_generator: any
+
 dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.0.0
   json_to_dart_generator: any
 ```
 
