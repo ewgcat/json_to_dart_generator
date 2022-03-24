@@ -1,0 +1,23 @@
+targets:
+  $default:
+    builders:
+      json_to_dart_generator:
+        enabled: true
+
+builders:
+  json_enum_builder:
+    target: ":json_to_dart_generator"
+    import: 'package:json_to_dart_generator/builder.dart'
+    builder_factories: [ 'jsonEnumBuilder' ]
+    build_extensions: { '.dart': [ '.enum.dart' ] }
+    auto_apply: root_package
+    build_to: source
+    runs_before: [ 'json_to_dart_generator|json_to_dart_builder' ]
+
+  json_to_dart_builder:
+    target: ":json_to_dart_generator"
+    import: 'package:json_to_dart_generator/builder.dart'
+    builder_factories: [ 'jsonObjectBuilder' ]
+    build_extensions: { '.dart': [ '.g.dart' ] }
+    auto_apply: root_package
+    build_to: source
