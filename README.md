@@ -1,11 +1,11 @@
 Language: [English](README.md) | [中文](README_ZH.md)
 
 # json_to_dart_generator
-Convert dart class by generator 
+Generate json parsing file by annotating Dart class 
 
+Support enum
 Support multiple formats(array root / multiple array)
-When the elements in the array are different, it will be converted to a mutually inclusive type as much as possible
-If they cannot contain each other, they will be displayed in a dynamic way, and the underlying elements will no longer be analyzed
+
 
 
 ## Usage
@@ -23,9 +23,7 @@ import 'package:json_to_dart_generator/json_to_dart_generator.dart';
 
 
 ```
-
-#### 2. Use this package as an executable
-1. create a dart file address_info.dart    
+#### 2. create a dart file address_info.dart    
 ```
 import 'dart:convert';
 
@@ -40,10 +38,11 @@ class AddressInfo {
    }
 ```
              
-2. Running    
-       flutter pub run build_runner build
-        
-3.address_info.g.dart
+#### 3. Running    
+```
+flutter pub run build_runner build
+```
+#### 4.generate address_info.g.dart
 ```
 AddressInfo _$AddressInfoFromJson(Map<String, dynamic> json) => AddressInfo(
       province: json['province']?.toString() ?? '',
