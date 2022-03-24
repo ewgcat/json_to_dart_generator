@@ -256,13 +256,6 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "4.0.1"
-  json_to_dart:
-    dependency: transitive
-    description:
-      path: ".."
-      relative: true
-    source: path
-    version: "0.0.1"
   json_to_dart_generator:
     dependency: "direct main"
     description:
