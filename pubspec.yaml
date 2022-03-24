@@ -1,7 +1,7 @@
 name: json_to_dart_generator
 description: A new Flutter project.
 version: 0.0.1
-homepage:https://github.com/ewgcat/json_to_dart_generator
+homepage: https://github.com/ewgcat/json_to_dart_generator
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
